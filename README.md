@@ -1,7 +1,9 @@
 # Smart-horses
 
 Universidad del Valle
+
 Facultad de Ingeniería | Escuela de Ingeniería de Sistemas y Computación | Inteligencia Artificial
+
 Carlos Alberto Henao - 2110339 | Oscar Trujillo - 2110318 | Sebastián Tutistar Valencia - 2110309
 
 Smart horses es un juego entre dos adversarios en el que cada uno controla un caballo sobre 
