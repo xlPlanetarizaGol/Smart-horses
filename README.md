@@ -15,7 +15,12 @@ son aleatorias.
 
 Aclaraciones generales:
 • El juego siempre lo inicia la máquina quien jugará con el caballo blanco.
+
 • Las posiciones iniciales de los caballos son aleatorias.
+
 • Las posiciones de las siete casillas con puntos son aleatorias.
+
 • Se debe mostrar en cada momento la cantidad de puntos de cada jugador.
+
 • Al final del juego se debe indicar quién es el ganador o si hubo empate.
+
