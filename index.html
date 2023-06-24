@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td {
+            width: 75px;
+            height: 75px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div>
+            <h1 id="score-player">Player: 0</h1>
+            <h1 id="score-ia">IA: 0</h1>
+            <h1 id="turn" style="display: none;">Turno: IA</h1>
+        </div>
+        <div>
+            <select name="dificultad" id="dificultad">
+                <option value="2">Principiante</option>
+                <option value="4">Amateur</option>
+                <option value="6">Experto</option>
+            </select>
+            <button id="start">Jugar</button>
+        </div>
+        <table id="game" border="1"></table>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
