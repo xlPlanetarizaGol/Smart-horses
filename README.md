@@ -14,6 +14,7 @@ estado inicial del juego. Las posiciones iniciales de los caballos y de las siet
 son aleatorias.
 
 Aclaraciones generales:
+
 • El juego siempre lo inicia la máquina quien jugará con el caballo blanco.
 
 • Las posiciones iniciales de los caballos son aleatorias.
