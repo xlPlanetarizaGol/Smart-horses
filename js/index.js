@@ -1,4 +1,3 @@
-
 let environment = [];
 let scorePlayer = 0;
 let scoreIA = 0;
@@ -189,17 +188,23 @@ function max(currentIAPos, currentPlayerPos, currentDepth, currentScore) {
     let selectedPlay = currentIAPos;
     if (currentDepth + 1 <= depth) {
         environment[currentIAPos[0]][currentIAPos[1]] = 0;
-        getValidMoves(currentIAPos, 9).forEach(move => {
+        let isSelectedPlay = false;
+        const moves = getValidMoves(currentIAPos, 9);
+        moves.forEach(move => {
             const moveScore = environment[move[0]][move[1]];
             environment[move[0]][move[1]] = 8;
             const [score, cost] = min(move, currentPlayerPos, currentDepth + 1, moveScore);
-            if (score / cost >= totalScore / totalCost) {
+            if (score / cost > totalScore / totalCost) {
+                isSelectedPlay = true;
                 totalScore = score;
                 totalCost = cost;
                 selectedPlay = move;
             }
             environment[move[0]][move[1]] = moveScore;
         });
+        if(!isSelectedPlay){
+            selectedPlay = moves[0];
+        }
         environment[currentIAPos[0]][currentIAPos[1]] = 8;
     } else {
         totalCost = 0;
@@ -216,7 +221,7 @@ function min(currentIAPos, currentPlayerPos, currentDepth, currentScore) {
             const moveScore = environment[move[0]][move[1]];
             environment[move[0]][move[1]] = 9;
             const [score, cost] = max(currentIAPos, move, currentDepth + 1, moveScore);
-            if (score / cost <= totalScore / totalCost) {
+            if (score / cost < totalScore / totalCost) {
                 totalScore = score;
                 totalCost = cost;
             }
